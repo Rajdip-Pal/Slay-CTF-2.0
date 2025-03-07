@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 const About = () => {
   return (
-    <div className='flex justify-center items-center h-screen'>
+    <div className='flex justify-center items-center h-screen font-squidGame'>
       About
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
