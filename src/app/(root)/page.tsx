@@ -2,12 +2,12 @@
 
 // importing needed modules
 import React from 'react';
-import { useRouter } from 'next/router';
 
 // importing needed components
-import Home from '@/components/Home/Home';
-import Navbar from '@/components/Navbar/Navbar';
-import Hero from '@/components/Hero_Landing/Hero';
+import ThemeProvider from '@/contexts/ThemeProvider';
+import Home from '@/components/Home';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
 
 const page = () => {
   const [showingHero, setShowingHero] = React.useState(true);
@@ -18,15 +18,17 @@ const page = () => {
   });
 
   return (
-    <React.Fragment>
-      {showingHero && <Hero />}
-      {!showingHero && (
-        <div className='justify-center items-center'>
-          <Navbar />
-          {/* <Home /> */}
-        </div>
-      )}
-    </React.Fragment>
+    <ThemeProvider>
+      <React.Fragment>
+        {showingHero && <Hero />}
+        {!showingHero && (
+          <div className='justify-center items-center'>
+            <Navbar />
+            <Home />
+          </div>
+        )}
+      </React.Fragment>
+    </ThemeProvider>
   );
 };
 
