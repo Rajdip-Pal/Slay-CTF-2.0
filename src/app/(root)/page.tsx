@@ -2,7 +2,7 @@
 
 // importing needed modules
 import React from 'react';
-
+import '../globals.css'
 // importing needed components
 import ThemeProvider from '@/contexts/ThemeProvider';
 import Home from '@/components/Home';
@@ -14,7 +14,7 @@ const page = () => {
 
   React.useEffect(() => {
     document.title = 'Slay Ctf';
-    setTimeout(() => setShowingHero(false), 4000);
+    setTimeout(() => setShowingHero(false), 2000);
   });
 
   return (
