@@ -117,3 +117,36 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.typing-container {
+  opacity: 0;
+  animation: fadeIn 0.1s forwards 0.8s;
+}
+
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 2px solid #ec4899; /* Cursor */
+  animation: typing 2.5s steps(20, end) forwards 1s, blink 0.7s step-end infinite 3.5s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 20ch; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.text-stroke-pink {
+  color: white;
+  -webkit-text-stroke: 0.2px #ec4899; /* Tailwind's pink-500 */
+  text-shadow: 0 0 5px rgba(236, 72, 153, 0.8); /* subtle glow */
+}
