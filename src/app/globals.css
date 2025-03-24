@@ -80,6 +80,7 @@ body {
     --color-4: 195 100% 63%;
     --color-5: 90 100% 63%;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -113,6 +114,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -128,25 +130,37 @@ body {
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-  border-right: 2px solid #ec4899; /* Cursor */
+  border-right: 2px solid #ec4899;
+  /* Cursor */
   animation: typing 2.5s steps(20, end) forwards 1s, blink 0.7s step-end infinite 3.5s;
 }
 
 @keyframes fadeIn {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 20ch; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 20ch;
+  }
 }
 
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
 
 .text-stroke-pink {
   color: white;
-  -webkit-text-stroke: 0.2px #ec4899; /* Tailwind's pink-500 */
-  text-shadow: 0 0 5px rgba(236, 72, 153, 0.8); /* subtle glow */
+  -webkit-text-stroke: 0.2px #ec4899;
+  /* Tailwind's pink-500 */
+  text-shadow: 0 0 5px rgba(236, 72, 153, 0.8);
+  /* subtle glow */
 }
