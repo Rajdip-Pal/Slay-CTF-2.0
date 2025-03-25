@@ -9,8 +9,8 @@ function TimelineCard({
   },
 }: {
   content?: {
-    date: String;
-    event: String;
+    date: string;
+    event: string;
     time: string;
     description?: string;
   } | null;
