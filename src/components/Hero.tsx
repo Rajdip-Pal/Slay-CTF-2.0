@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Circle } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 function ElegantShape({
   className,
@@ -72,6 +73,7 @@ function ElegantShape({
 
 function HeroGeometric({
   badge = 'Design Collective',
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   title1 = 'Elevate Your Digital Vision',
   title2 = 'Crafting Exceptional Websites',
   description = 'Crafting exceptional digital experiences through innovative design and cutting-edge technology.',
@@ -165,7 +167,7 @@ function HeroGeometric({
             animate='visible'
           >
             <h1 className='text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight'>
-            <img src="/SlayCtf.svg" alt="Slay CTF Logo" className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full h-auto mx-auto" />
+            <Image src="/SlayCtf.svg" alt="Slay CTF Logo" className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full h-auto mx-auto" />
               <br />
               <span
                 className={cn(
