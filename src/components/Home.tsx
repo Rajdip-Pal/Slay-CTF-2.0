@@ -31,8 +31,10 @@ function Home() {
         </div>
       </div>
 
-      <Rules />
-      <FAQ />
+      <div className='w-[100%] space-y-20'>
+        <Rules />
+        <FAQ />
+      </div>
     </>
   );
 }
