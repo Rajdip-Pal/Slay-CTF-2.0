@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import RULES_IMAGE from '@/components/logos/slay-ctf';
+import { RULES_IMAGE } from '@/components/logos/slay-ctf';
 
 const rules = [
   'Participants are allowed to use any tool (online/offline) for solving the challenges.',
@@ -34,8 +34,14 @@ function Rules() {
       id='rules'
     >
       {/* Static Circular Image */}
-      <div className='absolute -top-8 -left-8 w-24 h-24 rounded-full bg-white/10 border-2 border-pink-500 overflow-hidden'>
-        <RULES_IMAGE />
+      <div className='absolute -top-8 -left-8 w-24 h-24 rounded-full bg-white/10 border-2 border-pink-500 overflow-hidden '>
+        <Image
+          src='/images/rules-image_optimized.png'
+          alt='Rules Image'
+          width={100}
+          height={100}
+          className='object-cover w-full h-full'
+        />
       </div>
 
       {/* Animated Heading */}

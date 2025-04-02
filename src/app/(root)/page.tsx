@@ -2,12 +2,11 @@
 
 // importing needed modules
 import React from 'react';
-import '../globals.css';
+// import '../globals.css';
 // importing needed components
 import ThemeProvider from '@/contexts/ThemeProvider';
 import Home from '@/components/Home';
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
+import RainText from '@/components/ui/matrix-code';
 
 const page = () => {
   return (

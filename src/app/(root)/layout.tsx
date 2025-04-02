@@ -3,6 +3,7 @@ import React from 'react';
 import { Footer } from '../../components/Footer';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import RainText from '@/components/ui/matrix-code';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [showingHero, setShowingHero] = React.useState(true);
@@ -17,6 +18,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       {showingHero && <Hero />}
       {!showingHero && (
         <React.Fragment>
+          {/* <RainText
+            fontSize={20}
+            color=' rgba(236, 72, 153, 0.8)'
+            characters='01'
+            fadeOpacity={0.1}
+            speed={1.0}
+          /> */}
           <Navbar />
           {children}
           <Footer />
