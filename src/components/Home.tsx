@@ -4,6 +4,7 @@ import { ThemeContext } from '@/contexts/ThemeProvider';
 import Rules from '@/components/Rules';
 import { motion } from 'framer-motion';
 import FAQ from './Faq';
+import RainText from '@/components/ui/matrix-code';
 
 function Home() {
   const { theme } = React.useContext(ThemeContext);
@@ -11,7 +12,7 @@ function Home() {
   return (
     <>
       <div
-        className={`min-h-screen flex flex-col items-center justify-center text-center ${
+        className={`z-10 min-h-screen flex flex-col items-center justify-center text-center ${
           theme === 'dark' ? 'text-white' : 'text-black'
         }`}
       >
