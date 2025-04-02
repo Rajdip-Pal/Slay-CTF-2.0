@@ -20,9 +20,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <React.Fragment>
           {/* <RainText
             fontSize={20}
-            color=' rgba(236, 72, 153, 0.8)'
-            characters='01'
-            fadeOpacity={0.1}
+            color='rgba(236, 72, 153, 0.8)'
+            characters='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+            fadeOpacity={0.3}
             speed={1.0}
           /> */}
           <Navbar />

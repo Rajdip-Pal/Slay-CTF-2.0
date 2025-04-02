@@ -6,7 +6,6 @@ import React from 'react';
 // importing needed components
 import ThemeProvider from '@/contexts/ThemeProvider';
 import Home from '@/components/Home';
-import RainText from '@/components/ui/matrix-code';
 
 const page = () => {
   return (
