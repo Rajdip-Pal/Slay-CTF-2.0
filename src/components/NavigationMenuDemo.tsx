@@ -35,8 +35,8 @@ export function NavigationMenuDemo({
           return (
             <NavigationMenuItem key={index}>
               {item.expandable == undefined || false ? (
-                <>
-                  <NavigationMenuTrigger className='bg-transparent'>
+                <React.Fragment>
+                  <NavigationMenuTrigger className='bg-transparent border-2 border-transparent text-white hover:bg-transparent hover:border-white'>
                     {item.title}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -52,7 +52,7 @@ export function NavigationMenuDemo({
                       ))}
                     </ul>
                   </NavigationMenuContent>
-                </>
+                </React.Fragment>
               ) : (
                 <Link href={item.href} legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>

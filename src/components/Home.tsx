@@ -7,6 +7,10 @@ import FAQ from './Faq';
 import RainText from '@/components/ui/matrix-code';
 
 function Home() {
+  React.useEffect(() => {
+    document.title = 'Home | Slay CTF';
+  }, []);
+
   const { theme } = React.useContext(ThemeContext);
 
   return (

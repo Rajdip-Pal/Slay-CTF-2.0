@@ -1,51 +1,59 @@
+import Link from 'next/link';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Avatar, AvatarImage } from '@/components/ui/avatar';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import squidGameLogo from '@/assets/images/squidGameLogo.png';
+import cardBoardTexture from '@/assets/images/card-board-texture.jpeg';
 
 export interface TestimonialAuthor {
   name: string;
-  handle: string;
+  title: string;
   avatar: string;
 }
 
 export interface TestimonialCardProps {
   author: TestimonialAuthor;
-  text: string;
-  href?: string;
   className?: string;
 }
 
-export function TestimonialCard({
-  author,
-  text,
-  href,
-  className,
-}: TestimonialCardProps) {
-  const Card = href ? 'a' : 'div';
-
+export function TestimonialCard({ author, className }: TestimonialCardProps) {
   return (
-    <Card
-      {...(href ? { href } : {})}
+    <div
       className={cn(
-        'flex flex-col rounded-lg border-t',
-        'bg-gradient-to-b from-muted/50 to-muted/10',
-        'p-4 text-start sm:p-6',
+        'flex rounded-lg border-t',
+        'hover:linear-gradient bg-gradient-to-tl',
+        'card bg-[url(/images/card-board-texture.png)]',
+        'border border-muted/50',
         'hover:from-muted/60 hover:to-muted/20',
         'max-w-[320px] sm:max-w-[320px]',
         'transition-colors duration-300',
+        'space-y-2',
         className
       )}
     >
-      <div className='flex items-center gap-3'>
-        <Avatar className='h-12 w-12'>
+      <div className='w-16 h-full overflow-hidden'>
+        <Image src={squidGameLogo} alt='' className='h-full' />
+      </div>
+      <div className='flex justify-center items-center gap-3 space-y-3'>
+        <Avatar className='h-100 w-100 '>
           <AvatarImage src={author.avatar} alt={author.name} />
         </Avatar>
-        <div className='flex flex-col items-start'>
+        <div className='flex flex-col items-center space-y-2'>
           <h3 className='text-md font-semibold leading-none'>{author.name}</h3>
-          <p className='text-sm text-muted-foreground'>{author.handle}</p>
+          <div className='bg-[#260C19] p-2 rounded-md text-sm text-white'>
+            {author.title}
+          </div>
+          <div className='flex items-center gap-2 mt-2'>
+            <Link href={'/'} className='text-sm hover:text-muted-foreground'>
+              <FaLinkedin className='h-5 w-5' />
+            </Link>
+            <Link href={'/'} className='text-sm hover:text-muted-foreground'>
+              <FaGithub className='h-5 w-5' />
+            </Link>
+          </div>
         </div>
       </div>
-      <p className='sm:text-md mt-4 text-sm text-muted-foreground'>{text}</p>
-      <div></div>
-    </Card>
+    </div>
   );
 }

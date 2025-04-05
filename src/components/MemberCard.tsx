@@ -1,4 +1,5 @@
 import { TestimonialCard } from '@/components/ui/testimonial-card';
+import { title } from 'process';
 
 const testimonials = [
   {
@@ -62,7 +63,7 @@ const testimonials = [
   {
     author: {
       name: 'Liam Johnson',
-      handle: '@liamtech',
+      title: 'Lead Data Scientist',
       avatar:
         'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face',
     },
