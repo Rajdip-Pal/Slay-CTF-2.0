@@ -14,7 +14,7 @@ const navContent = [
   { title: 'Home', href: '/', expandable: false },
   { title: 'About', href: '/about', expandable: false },
   { title: 'Members', href: '/members', expandable: false },
-  { title: 'Leaderboard', href: '/leaderboard', expandable: false },
+  { title: 'Leaderboard', href: '/leaderboar', expandable: false },
   { title: 'Timeline', href: '/events', expandable: false },
 ];
 
