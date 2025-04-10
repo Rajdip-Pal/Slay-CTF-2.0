@@ -2,7 +2,7 @@
 import React from 'react';
 import { Footer } from '../../components/Footer';
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
+import Hero from '@/pages/Hero';
 import RainText from '@/components/ui/matrix-code';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {

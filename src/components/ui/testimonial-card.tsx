@@ -29,16 +29,9 @@ export function TestimonialCard({ author, className }: TestimonialCardProps) {
       )}
     >
       <div className='flex-col justify-center items-center gap-3 space-y-3 text-pink-600 hover:scale-110 transition-all duration-1000'>
-        <Link
-          href={author.linkedin || '/'}
-          target='_blank'
-          rel='noopener noreferrer'
-          className='flex items-center justify-center'
-        >
-          <Avatar className='max-h-[200px] max-w-[200px] h-80 w-80 rounded-xl'>
-            <AvatarImage src={author.avatar} alt={author.name} />
-          </Avatar>
-        </Link>
+        <Avatar className='max-h-[200px] max-w-[200px] h-80 w-80 rounded-xl'>
+          <AvatarImage src={author.avatar} alt={author.name} />
+        </Avatar>
         <div className='flex flex-col items-center space-y-2'>
           <h3 className='text-md font-semibold leading-none text-white hover:text-gray-600 transition-all duration-1000'>
             {author.name}

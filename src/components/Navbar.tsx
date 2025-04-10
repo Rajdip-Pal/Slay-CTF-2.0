@@ -50,51 +50,53 @@ function Navbar() {
           <Link href='/'>SLAY CTF</Link>
         </div>
 
-        {showingMobileNavabar ? (
-          <X
-            className='w-10 text-white'
-            onClick={() => setShowingMobileNavbar(false)}
-          />
-        ) : (
-          <Menu
-            className='w-10 text-white'
-            onClick={() => setShowingMobileNavbar(true)}
-          />
-        )}
-
-        {showingMobileNavabar && (
-          <motion.div
-            initial={{ opacity: 0, y: -300 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -300 }}
-            transition={{
-              opacity: { duration: 0.3 },
-              y: { type: 'spring', stiffness: 300, damping: 30 },
-            }}
-            className='fixed top-0 left-0 w-full z-10 p-10 pt-0  flex flex-col items-center backdrop-blur-xl space-y-2  mt-16 '
+        <div className='h-10 flex items-center space-x-2'>
+          <Button
+            onClick={() =>
+              (window.location.href = process.env.LOGIN_URL || '/')
+            }
           >
-            <div className='flex flex-col items-center space-y-2 w-full  bg-black/50 backdrop-blur-xl rounded-xl p-5'>
-              {navContent.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className='text-lg text-white hover:text-gray-300 hover:border-gray-300 w-[100%] text-center py-2'
-                >
-                  {item.title}
-                </Link>
-              ))}
-              <div className='flex justify-center space-x-2 w-full'>
-                <Button
-                  onClick={() =>
-                    (window.location.href = process.env.LOGIN_URL || '/')
-                  }
-                >
-                  Login / Register
-                </Button>
-              </div>
-            </div>
-          </motion.div>
-        )}
+            Login
+          </Button>
+          {showingMobileNavabar ? (
+            <X
+              className='h-[100%] text-white'
+              onClick={() => setShowingMobileNavbar(false)}
+            />
+          ) : (
+            <Menu
+              className='h-[100%] text-white'
+              onClick={() => setShowingMobileNavbar(true)}
+            />
+          )}
+
+          {showingMobileNavabar && (
+            <>
+              <motion.div
+                initial={{ opacity: 0, y: -300 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -300 }}
+                transition={{
+                  opacity: { duration: 0.3 },
+                  y: { type: 'spring', stiffness: 300, damping: 30 },
+                }}
+                className='fixed top-0 left-0 w-full z-10 p-10 pt-0  flex flex-col items-center backdrop-blur-xl space-y-2  mt-16 '
+              >
+                <div className='flex flex-col items-center space-y-2 w-full  bg-black/50 backdrop-blur-xl rounded-xl p-5'>
+                  {navContent.map((item, index) => (
+                    <Link
+                      key={index}
+                      href={item.href}
+                      className='text-lg text-white hover:text-gray-300 hover:border-gray-300 w-[100%] text-center py-2'
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            </>
+          )}
+        </div>
       </nav>
     </React.Fragment>
   );

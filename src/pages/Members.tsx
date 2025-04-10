@@ -1,6 +1,7 @@
+'use client';
 import React from 'react';
-import Member from './MemberCard';
-import { TestimonialCardProps } from './ui/testimonial-card';
+import Member from '../components/MemberCard';
+import { TestimonialCardProps } from '../components/ui/testimonial-card';
 
 const CoreTeam: TestimonialCardProps[] = [
   {
@@ -26,6 +27,10 @@ const ExtendedCoreTeam: TestimonialCardProps[] = [
 ];
 
 function Members() {
+  React.useEffect(() => {
+    document.title = 'Members | Slay Ctf';
+  }, []);
+
   return (
     <React.Fragment>
       <div className='w-full min-h-[60vh] flex flex-col items-center justify-center space-y-10'>
