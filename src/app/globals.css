@@ -13,6 +13,10 @@ body {
   z-index: -1;
 }
 
+.card {
+  background-image: url('../../public/images/card-board-texture.png');
+}
+
 @media (max-width: 768px) {
   body {
     background-size: cover, cover, cover, 400px auto;

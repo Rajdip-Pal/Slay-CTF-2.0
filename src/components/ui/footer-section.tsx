@@ -18,7 +18,7 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 
-import SLAY_LOGO, { TWITTER_LOGO } from '../logos/slay-ctf';
+import SLAY_LOGO, { TWITTER_LOGO } from '../../logos/slay-ctf';
 
 function Footerdemo({
   quickLinks = [

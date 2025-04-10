@@ -1,51 +1,29 @@
 import React from 'react';
 
-function TimelineCard({
-  content = {
-    date: '',
-    event: '',
-    time: '',
-    description: '',
-  },
-}: {
-  content?: {
-    date: string;
-    event: string;
-    time: string;
-    description?: string;
-  } | null;
-}) {
-  return (
-    <React.Fragment>
-      <div className='w-50 h-30'></div>
-    </React.Fragment>
-  );
-}
+type TimelineCardProps = {
+  event: string;
+  date: string;
+  time?: string;
+  description?: string;
+};
 
-function Timeline({
-  content = [
-    {
-      date: '',
-      event: '',
-      time: '',
-      description: '',
-    },
-  ],
-}: {
-  content?: {
-    date: string;
-    event: string;
-    time: string;
-    description?: string;
-  }[];
-}) {
-  return (
-    <React.Fragment>
-      {content.map(() => {
-        return <></>;
-      })}
-    </React.Fragment>
-  );
+const Events: TimelineCardProps[] = [
+  {
+    event: 'Null Meetup',
+    date: '26 Apr 2025',
+    // time: '10:00 AM',
+    description: 'The CTF competition begins.',
+  },
+  {
+    event: 'CTF Ends',
+    date: '2023-10-02',
+    // time: '10:00 AM',
+    description: 'The CTF competition ends.',
+  },
+];
+
+function Timeline() {
+  return <div></div>;
 }
 
 export default Timeline;

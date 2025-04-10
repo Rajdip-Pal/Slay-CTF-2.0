@@ -5,7 +5,7 @@ import React from 'react';
 // import '../globals.css';
 // importing needed components
 import ThemeProvider from '@/contexts/ThemeProvider';
-import Home from '@/components/Home';
+import Home from '@/pages/Home';
 
 const page = () => {
   return (

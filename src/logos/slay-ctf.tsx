@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import SLAY_CTF_BANNER from '@/assets/images/slay-banner.png';
-import SLAY_CTF from '@/assets/images/SlayCtf.svg';
-import Twitter_Logo from '@/assets/images/twiter-x.png';
+import SLAY_CTF from '@/assets/icons/SlayCtf.svg';
+import Twitter_Logo from '@/assets/icons/twiter-x.png';
 import RULES from '@/assets/images/rules-image_optimized.png';
 
 const SLAY_LOGO = () => <Image src={SLAY_CTF} alt='SLAY' />;

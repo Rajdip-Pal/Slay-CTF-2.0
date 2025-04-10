@@ -3,10 +3,15 @@ import React from 'react';
 import { ThemeContext } from '@/contexts/ThemeProvider';
 import Rules from '@/components/Rules';
 import { motion } from 'framer-motion';
-import FAQ from './Faq';
+import FAQ from '../components/Faq';
 import RainText from '@/components/ui/matrix-code';
+import Timeline from '@/components/Timeline';
 
 function Home() {
+  React.useEffect(() => {
+    document.title = 'Home | Slay CTF';
+  }, []);
+
   const { theme } = React.useContext(ThemeContext);
 
   return (
@@ -34,6 +39,7 @@ function Home() {
 
       <div className='w-[100%] space-y-20'>
         <Rules />
+        <Timeline />
         <FAQ />
       </div>
     </>
