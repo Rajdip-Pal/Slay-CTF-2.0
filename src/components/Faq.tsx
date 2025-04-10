@@ -1,4 +1,4 @@
-import { FaqSection } from '@/components/blocks/faq';
+import { FaqSection } from '@/components/ui/faq';
 
 const DEMO_FAQS = [
   {

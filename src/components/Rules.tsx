@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { RULES_IMAGE } from '@/components/logos/slay-ctf';
+import { RULES_IMAGE } from '@/logos/slay-ctf';
 
 const rules = [
   'Participants are allowed to use any tool (online/offline) for solving the challenges.',
