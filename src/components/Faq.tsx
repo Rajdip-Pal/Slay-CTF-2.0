@@ -30,7 +30,7 @@ export default function FAQ() {
         buttonText: 'Contact Support',
         onContact: () => console.log('Contact support clicked'),
       }}
-      className='w-full justify-center'
+      className='w-full justify-center font-sans'
     />
   );
 }
