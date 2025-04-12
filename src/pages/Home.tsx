@@ -5,6 +5,7 @@ import Rules from '@/components/Rules';
 import { motion } from 'framer-motion';
 import FAQ from '../components/Faq';
 import Timeline from '@/components/Timeline';
+import Sponsers from '@/components/Sponsers';
 
 function Home() {
   React.useEffect(() => {
@@ -40,6 +41,7 @@ function Home() {
         <Rules />
         <Timeline />
         <FAQ />
+        <Sponsers/>
       </div>
     </>
   );
