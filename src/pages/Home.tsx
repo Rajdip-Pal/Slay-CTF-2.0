@@ -5,6 +5,7 @@ import Rules from '@/components/Rules';
 import { motion } from 'framer-motion';
 import FAQ from '../components/Faq';
 import { Clock } from '@/components/Clock';
+import Sponsers from '@/components/Sponsers';
 
 function Home() {
   React.useEffect(() => {
@@ -41,6 +42,7 @@ function Home() {
       <div className='w-[100%] space-y-20 flex-col justify-center items-center'>
         <Rules />
         <FAQ />
+        <Sponsers />
       </div>
     </>
   );
