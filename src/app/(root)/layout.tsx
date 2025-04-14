@@ -9,9 +9,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const [showingHero, setShowingHero] = React.useState(true);
 
   React.useEffect(() => {
-    document.title = 'SLAY CTF';
+    document.title = showingHero ? 'Welcome to Slay CTF' : 'Slay CTF - Explore';
     setTimeout(() => setShowingHero(false), 2000);
-  });
+  }, [showingHero]);
 
   return (
     <React.Fragment>

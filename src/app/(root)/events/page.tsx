@@ -1,5 +1,5 @@
 'use client';
-import Timeline from '@/components/Timeline';
+import Timeline from '@/pages/Timeline';
 import { motion } from 'framer-motion';
 import React from 'react';
 

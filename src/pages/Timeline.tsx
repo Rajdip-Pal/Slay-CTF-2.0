@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaStar } from 'react-icons/fa';
@@ -42,6 +43,10 @@ const Events: TimelineCardProps[] = [
 
 function Timeline({ events = Events }: { events?: TimelineCardProps[] }) {
   let isLeft = true;
+
+  React.useEffect(() => {
+    document.title = 'Events | Slay Ctf';
+  }, []);
 
   return (
     <div

@@ -162,7 +162,5 @@ body {
 .text-stroke-pink {
   color: white;
   -webkit-text-stroke: 0.2px #ec4899;
-  /* Tailwind's pink-500 */
   text-shadow: 0 0 5px rgba(236, 72, 153, 0.8);
-  /* subtle glow */
 }

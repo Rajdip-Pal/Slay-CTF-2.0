@@ -4,7 +4,7 @@ import { ThemeContext } from '@/contexts/ThemeProvider';
 import Rules from '@/components/Rules';
 import { motion } from 'framer-motion';
 import FAQ from '../components/Faq';
-import Timeline from '@/components/Timeline';
+import { Clock } from '@/components/Clock';
 import Sponsers from '@/components/Sponsers';
 
 function Home() {
@@ -31,17 +31,17 @@ function Home() {
           className='max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full h-auto mb-4 drop-shadow-lg shadow-white'
         />
         <div className='mt-40 typing-container'>
-          <p className='text-2xl sm:text-xl md:text-3xl lg:text-4xl font-bold w-full text-center text-white border border-pink-500 rounded px-4 py-2'>
+          <div className='text-2xl sm:text-xl md:text-3xl lg:text-4xl font-bold w-full text-center text-white border border-pink-500 rounded px-4 py-2 flex flex-col items-center justify-center'>
             <span className='typing'>Let the game begin.</span>
-          </p>
+          </div>
         </div>
       </div>
 
-      <div className='w-[100%] space-y-20 flex-col justify-center items-center'>
+      <div className='w-full space-y-20 flex flex-col justify-center items-center'>
+        <Clock />
         <Rules />
-        <Timeline />
         <FAQ />
-        <Sponsers/>
+        <Sponsers />
       </div>
     </>
   );
