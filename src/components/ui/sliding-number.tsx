@@ -8,6 +8,7 @@ import {
   motionValue,
 } from 'framer-motion';
 import useMeasure from 'react-use-measure';
+import { cn } from '@/lib/utils';
 
 const TRANSITION = {
   type: 'spring',
@@ -52,7 +53,6 @@ function Number({ mv, number }: { mv: MotionValue<number>; number: number }) {
     return memo;
   });
 
-  // don't render the animated number until we know the height
   if (!bounds.height) {
     return (
       <span ref={ref} className='invisible absolute'>
@@ -78,12 +78,14 @@ type SlidingNumberProps = {
   value: number;
   padStart?: boolean;
   decimalSeparator?: string;
+  className?: string;
 };
 
 export function SlidingNumber({
   value,
   padStart = false,
   decimalSeparator = '.',
+  className = '',
 }: SlidingNumberProps) {
   const absValue = Math.abs(value);
   const [integerPart, decimalPart] = absValue.toString().split('.');
@@ -96,7 +98,7 @@ export function SlidingNumber({
   );
 
   return (
-    <div className='flex items-center'>
+    <div className={cn('flex items-center', className)}>
       {value < 0 && '-'}
       {integerDigits.map((_, index) => (
         <Digit
