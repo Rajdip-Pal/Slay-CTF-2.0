@@ -1,6 +1,6 @@
 'use client';
 import React, { ReactElement, ReactNode } from 'react';
-import Members from '@/pages/Members';
+import Members from '@/webPages/Members';
 import { motion } from 'framer-motion';
 import { MobileNavContext } from '@/contexts/MobileNavProvider';
 

@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import Timeline from '@/pages/Timeline';
+import Timeline from '@/webPages/Timeline';
 import { motion } from 'framer-motion';
 import { MobileNavContext } from '@/contexts/MobileNavProvider';
 

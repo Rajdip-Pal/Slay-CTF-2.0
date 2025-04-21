@@ -21,7 +21,6 @@
     "@radix-ui/react-tooltip": "^1.1.8",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "dotenv": "^16.4.7",
     "framer-motion": "^12.5.0",
     "joi": "^17.13.3",
     "lucide-react": "^0.479.0",

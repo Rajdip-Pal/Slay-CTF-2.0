@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ThemeProvider from '@/contexts/ThemeProvider';
-import Home from '@/pages/Home';
+import Home from '@/webPages/Home';
 import MobileNavContextProvider, {
   MobileNavContext,
 } from '@/contexts/MobileNavProvider';
