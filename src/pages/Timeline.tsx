@@ -67,7 +67,7 @@ function Timeline({ events = Events }: { events?: TimelineCardProps[] }) {
           return (
             <div
               key={index}
-              className={`bg-transparent p-10 ${
+              className={`relative bg-transparent p-10 ${
                 !isLeft ? 'pr-10' : 'pl-10'
               } w-[50%] flex ${
                 !isLeft
@@ -85,10 +85,8 @@ function Timeline({ events = Events }: { events?: TimelineCardProps[] }) {
               </div>
               <div
                 className={`absolute ${
-                  !isLeft
-                    ? '-translate-x-[-155%] -translate-y-[-50%] '
-                    : 'translate-x-[-155%] -translate-y-[-50%] '
-                } w-10 h-10 rounded-full border-2 border-pink-500 bg-pink-500 flex justify-center items-center`}
+                  !isLeft ? '-right-[1.38rem]' : '-left-[1.37rem]'
+                } w-10 h-10 rounded-full border-2 border-pink-500 bg-pink-500 flex justify-center items-center hover:animate-bounce duration-700`}
               >
                 <FaStar />
               </div>

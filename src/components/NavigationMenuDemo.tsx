@@ -34,32 +34,36 @@ export function NavigationMenuDemo({
         {content.map((item, index) => {
           return (
             <NavigationMenuItem key={index}>
-              {item.expandable == undefined || false ? (
-                <React.Fragment>
-                  <NavigationMenuTrigger className='bg-transparent border-2 border-transparent text-white hover:bg-transparent hover:border-white'>
-                    {item.title}
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className='grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]'>
-                      {item.items?.map((subItem) => (
-                        <ListItem
-                          key={subItem.title}
-                          title={subItem.title}
-                          href={subItem.href}
-                        >
-                          {subItem.description}
-                        </ListItem>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </React.Fragment>
-              ) : (
-                <Link href={item.href} legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    {item.title}
-                  </NavigationMenuLink>
-                </Link>
-              )}
+              {
+                item.expandable == undefined || false ? (
+                  <React.Fragment>
+                    <NavigationMenuTrigger className='bg-transparent border-2 border-transparent text-white hover:bg-transparent hover:border-white hover:shadow-xl shadow-sm'>
+                      {item.title}
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className='grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]'>
+                        {item.items?.map((subItem) => (
+                          <ListItem
+                            key={subItem.title}
+                            title={subItem.title}
+                            href={subItem.href || '/'} // Fallback to '/' if href is undefined
+                          >
+                            {subItem.description}
+                          </ListItem>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </React.Fragment>
+                ) : item.href ? ( // Ensure href is defined
+                  <Link href={item.href} legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      {item.title}
+                    </NavigationMenuLink>
+                  </Link>
+                ) : null // Render nothing if href is undefined
+              }
             </NavigationMenuItem>
           );
         })}

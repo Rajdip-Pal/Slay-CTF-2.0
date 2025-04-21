@@ -7,23 +7,23 @@ import { motion } from 'framer-motion';
 function Sponsers() {
   return (
     <motion.div
-      className='relative flex flex-col items-center justify-center max-w-xl mx-auto space-y-6 text-white px-4 py-8 rounded-2xl min-h-[400px]'
+      className='relative flex flex-col items-center justify-center max-w-[80%] md:max-w-xl mx-auto space-y-6 text-white px-4 py-8 rounded-2xl min-h-[400px]   '
       style={{
         border: '4px solid transparent',
         borderRadius: '16px',
         position: 'relative',
         overflow: 'hidden',
       }}
-      animate={{
-        borderColor: [
-          '#FF007F', // Pink
-          '#FF6600', // Orange
-          '#FF0066', // Red
-          '#FF00FF', // Magenta
-          '#00FFFF', // Cyan
-          '#FF007F', // Back to Pink
-        ],
-      }}
+      // animate={{
+      //   borderColor: [
+      //     '#FF007F', // Pink
+      //     '#FF6600', // Orange
+      //     '#FF0066', // Red
+      //     '#FF00FF', // Magenta
+      //     '#00FFFF', // Cyan
+      //     '#FF007F', // Back to Pink
+      //   ],
+      // }}
       transition={{
         duration: 6,
         repeat: Infinity,
@@ -41,22 +41,22 @@ function Sponsers() {
       />
 
       {/* Sponsored by text */}
-      <h1 className='text-4xl font-extrabold tracking-wide text-center text-red-400 drop-shadow-lg'>
+      <h1 className='text-xl md:text-4xl font-extrabold tracking-wide text-center text-red-400 drop-shadow-lg'>
         Sponsored by
       </h1>
 
       {/* Sponsor Logo + Socials */}
-      <div className='relative flex flex-col items-center space-y-4 p-6 rounded-2xl z-10 bg-black border border-pink-600 before:absolute before:inset-1 before:rounded-2xl before:-z-10 before:animate-glow before:bg-gradient-to-r before:from-pink-500 before:via-red-500 before:to-pink-500 before:blur-sm hover:scale-105 transition-transform duration-300 ease-in-out'>
+      <div className='relative flex flex-col items-center space-y-4 p-6 rounded-2xl bg-black border border-pink-600 before:absolute before:inset-1 before:rounded-2xl before:animate-glow before:bg-gradient-to-r before:from-pink-500 before:via-red-500 before:to-pink-500 before:blur-sm hover:scale-105 transition-transform duration-300 ease-in-out'>
         <Image
           src='/images/null-kolkata.png'
           alt='null-logo'
           width={90}
           height={90}
-          className='object-contain'
+          className='object-contain z-[2] rounded-sm'
         />
 
         {/* Social Media Icons */}
-        <div className='flex space-x-6 text-2xl text-yellow-400'>
+        <div className='flex space-x-6 text-2xl text-yellow-400 z-[2]'>
           <Link
             href='https://www.linkedin.com/company/null-kolkata-chapter/'
             target='_blank'

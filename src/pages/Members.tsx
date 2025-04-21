@@ -1,30 +1,11 @@
 'use client';
 import React from 'react';
+import { motion } from 'framer-motion';
 import Member from '../components/MemberCard';
 import { TestimonialCardProps } from '../components/ui/testimonial-card';
+import { EVENT_MEMBERS } from '@/constants';
 
-const CoreTeam: TestimonialCardProps[] = [
-  {
-    author: {
-      name: 'Souhardya Deb',
-      title: 'Web Leader',
-      avatar: './images/memebrs/souhardya.png',
-      linkedin: 'https://www.linkedin.com/in/souhardya-deb-921578254/',
-      github: 'https://github.com/Souhardya03',
-    },
-  },
-];
-const ExtendedCoreTeam: TestimonialCardProps[] = [
-  {
-    author: {
-      name: 'Rajdip Pal',
-      title: 'Web Developer',
-      avatar: './images/memebrs/rajdip.png',
-      linkedin: 'https://www.linkedin.com/in/rajdip-pal/',
-      github: 'https://github.com/Rajdip-Pal',
-    },
-  },
-];
+const CoreTeam: TestimonialCardProps[] = EVENT_MEMBERS;
 
 function Members() {
   React.useEffect(() => {
@@ -33,22 +14,19 @@ function Members() {
 
   return (
     <React.Fragment>
-      <div className='w-full min-h-[60vh] flex flex-col items-center justify-center space-y-10'>
-        <div className='w-full flex flex-col items-center justify-center mt-32'>
-          <div className='flex flex-col items-center justify-center flex-wrap space-y-1'>
-            <h2 className='text-white text-3xl px-7'>Core Team</h2>
-            <div className='bg-[#EC4899] w-[100%] h-1 rounded-full'></div>
-          </div>
-          <Member testimonials={CoreTeam} />
+      <motion.div className='w-full flex flex-col items-center justify-center p-16'>
+        <div className='flex flex-col items-center justify-center flex-wrap space-y-1'>
+          <motion.h2
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className='text-white text-3xl md:text-4xl font-semibold text-center drop-shadow-[0_0_10px_rgba(236,72,153,0.9)] mb-5 font-sans'
+          >
+            Our Team
+          </motion.h2>
         </div>
-        <div className='w-full flex flex-col items-center justify-center mt-32'>
-          <div className='flex flex-col items-center justify-center flex-wrap space-y-1'>
-            <h2 className='text-white text-2xl px-7'>Extended Core Team</h2>
-            <div className='bg-[#EC4899] w-[100%] h-1 rounded-full'></div>
-          </div>
-          <Member testimonials={ExtendedCoreTeam} />
-        </div>
-      </div>
+        <Member testimonials={CoreTeam} />
+      </motion.div>
     </React.Fragment>
   );
 }

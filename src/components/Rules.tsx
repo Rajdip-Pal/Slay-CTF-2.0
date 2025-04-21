@@ -1,14 +1,7 @@
 'use client';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { RULES_IMAGE } from '@/logos/slay-ctf';
-
-const rules = [
-  'Participants are allowed to use any tool (online/offline) for solving the challenges.',
-  'Flag sharing is strictly prohibited. It will cause a ban from the CTF for both players.',
-  'The duration of the CTF is 2.5 hours.',
-  'Any type of attack on the CTF website is strictly prohibited.',
-];
+import { motion } from 'framer-motion';
+import { EVENT_RULES } from '@/constants';
 
 // Animation variants
 const containerVariants = {
@@ -30,7 +23,7 @@ function Rules() {
       whileInView='visible'
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
-      className='relative bg-transparent border border-white/20 rounded-xl p-6 max-w-3xl mx-auto mt-10 backdrop-blur-md'
+      className='relative bg-transparent border border-white/20 rounded-xl p-6 mx-auto mt-10 backdrop-blur-md max-w-[80%]'
       id='rules'
     >
       {/* Static Circular Image */}
@@ -57,9 +50,9 @@ function Rules() {
       {/* Animated Rules List */}
       <motion.div
         variants={containerVariants}
-        className='text-white text-sm md:text-base leading-relaxed space-y-3 pl-4'
+        className='text-white text-sm md:text-base leading-relaxed pl-4'
       >
-        {rules.map((rule, index) => (
+        {EVENT_RULES.map((rule, index) => (
           <motion.p
             key={index}
             variants={itemVariants}

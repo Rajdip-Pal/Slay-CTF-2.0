@@ -5,6 +5,7 @@ import { Circle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import SLAY_LOGO from '../logos/slay-ctf';
+import { ReactNode } from 'react';
 
 function ElegantShape({
   className,
@@ -72,18 +73,14 @@ function ElegantShape({
   );
 }
 
-function HeroGeometric({
-  badge = 'Design Collective',
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  title1 = 'Elevate Your Digital Vision',
-  title2 = 'Crafting Exceptional Websites',
-  description = 'Crafting exceptional digital experiences through innovative design and cutting-edge technology.',
-}: {
-  badge?: string;
-  title1?: string;
-  title2?: string;
-  description?: string;
-}) {
+interface HeroInput {
+  badge?: ReactNode;
+  title1?: ReactNode;
+  title2?: ReactNode;
+  description?: ReactNode;
+}
+
+function HeroGeometric({ badge, title1, title2, description }: HeroInput) {
   const fadeUpVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
@@ -149,27 +146,15 @@ function HeroGeometric({
       </div>
 
       <div className='relative z-10 container mx-auto px-4 md:px-6'>
-        <div className='max-w-3xl mx-auto text-center'>
-          <motion.div
-            custom={0}
-            variants={fadeUpVariants}
-            initial='hidden'
-            animate='visible'
-            className='inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 md:mb-12'
-          >
-            <Circle className='h-2 w-2 fill-rose-500/80' />
-            <span className='text-sm text-white/60 tracking-wide'>{badge}</span>
-          </motion.div>
-
+        <div className='max-w-3xl mx-auto text-center items-center flex flex-col justify-center'>
           <motion.div
             custom={1}
             variants={fadeUpVariants}
             initial='hidden'
             animate='visible'
           >
-            <h1 className='text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight'>
-              <SLAY_LOGO />
-              <br />
+            <h1 className='text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight pl-10 pr-10'>
+              {title1}
               <span
                 className={cn(
                   'bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300 '
@@ -181,15 +166,24 @@ function HeroGeometric({
           </motion.div>
 
           <motion.div
+            custom={0}
+            variants={fadeUpVariants}
+            initial='hidden'
+            animate='visible'
+            className='inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 md:mb-12'
+          >
+            <Circle className='h-2 w-2 fill-rose-500/80' />
+            <span className='text-sm text-white/60 tracking-wide'>{badge}</span>
+          </motion.div>
+
+          {/* <motion.div
             custom={2}
             variants={fadeUpVariants}
             initial='hidden'
             animate='visible'
           >
-            <p className='text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4'>
-              {description}
-            </p>
-          </motion.div>
+            {description}
+          </motion.div> */}
         </div>
       </div>
 
@@ -203,10 +197,15 @@ export { HeroGeometric };
 function Hero() {
   return (
     <HeroGeometric
-      badge='ZERO LOGON'
-      title1='Slay CTf'
-      title2=''
-      description=''
+      badge='ZERO LOGON X DNC'
+      title1={<SLAY_LOGO />}
+      description={
+        <div className='mt-40 typing-container'>
+          <div className='text-2xl sm:text-xl md:text-3xl lg:text-4xl font-bold w-full text-center text-white border border-pink-500 rounded px-4 py-2 flex flex-col items-center justify-center'>
+            <span className='typing'>Let the game begin.</span>
+          </div>
+        </div>
+      }
     />
   );
 }
