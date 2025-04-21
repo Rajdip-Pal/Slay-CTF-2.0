@@ -15,7 +15,7 @@ function Home() {
   const { theme } = React.useContext(ThemeContext);
 
   return (
-    <>
+    <React.Fragment>
       <div
         className={`z-10 min-h-screen flex flex-col items-center justify-center text-center ${
           theme === 'dark' ? 'text-white' : 'text-black'
@@ -43,7 +43,7 @@ function Home() {
         <FAQ />
         <Sponsers />
       </div>
-    </>
+    </React.Fragment>
   );
 }
 

@@ -113,17 +113,15 @@ function Footerdemo({
           <section className='quickLinks'>
             <h3 className='mb-4 text-lg font-semibold'>Quick Links</h3>
             <nav className='space-y-2 text-sm'>
-              {...quickLinks.map((item, index): React.ReactNode => {
-                return (
-                  <Link
-                    key={index}
-                    href={item.link}
-                    className='block transition-colors hover:text-gray-500'
-                  >
-                    {item.text}
-                  </Link>
-                );
-              })}
+              {quickLinks.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.link || '/'} // Fallback to '/' if link is undefined
+                  className='block transition-colors hover:text-gray-500'
+                >
+                  {item.text}
+                </Link>
+              ))}
             </nav>
           </section>
 

@@ -28,8 +28,8 @@ export function TestimonialCard({ author, className }: TestimonialCardProps) {
         className
       )}
     >
-      <div className='flex-col justify-center items-center gap-3 space-y-3 text-pink-600 hover:scale-110 transition-all duration-1000'>
-        <Avatar className='max-h-[200px] max-w-[200px] h-80 w-80 rounded-xl'>
+      <div className='flex-col justify-center items-center gap-3 space-y-3 text-pink-600 md:hover:scale-110 transition-all duration-1000'>
+        <Avatar className='max-h-[200px] max-w-[200px] h-80 w-80 rounded-xl '>
           <AvatarImage src={author.avatar} alt={author.name} />
         </Avatar>
         <div className='flex flex-col items-center space-y-2'>
@@ -40,16 +40,12 @@ export function TestimonialCard({ author, className }: TestimonialCardProps) {
           <div className='flex items-center gap-2 mt-2 '>
             <Link
               href={author.linkedin || '/'}
-              target='_blank'
-              rel='noopener noreferrer'
               className='text-sm  text-blue-600 hover:text-muted-foreground'
             >
               <FaLinkedin className='h-5 w-5' />
             </Link>
             <Link
               href={author.github || '/'}
-              target='_blank'
-              rel='noopener noreferrer'
               className='text-sm text-white hover:text-muted-foreground'
             >
               <FaGithub className='h-5 w-5' />

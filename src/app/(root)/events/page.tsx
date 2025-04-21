@@ -1,9 +1,14 @@
 'use client';
+import React from 'react';
 import Timeline from '@/pages/Timeline';
 import { motion } from 'framer-motion';
-import React from 'react';
+import { MobileNavContext } from '@/contexts/MobileNavProvider';
 
 function page() {
+  const { navShow, toggleNavShow } = React.useContext(MobileNavContext);
+  React.useEffect(() => {
+    if (navShow) toggleNavShow();
+  }, []);
   return (
     <React.Fragment>
       <motion.div
