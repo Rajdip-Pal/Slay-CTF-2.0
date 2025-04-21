@@ -2,7 +2,7 @@
 import React from 'react';
 import { Footer } from '../../components/Footer';
 import Navbar from '@/components/Navbar';
-import Hero from '@/pages/Hero';
+import Hero from '@/webPages/Hero';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [showingHero, setShowingHero] = React.useState(true);

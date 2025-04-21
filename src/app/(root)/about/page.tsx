@@ -1,4 +1,4 @@
-import About from '@/pages/About';
+import About from '@/webPages/About';
 import React from 'react';
 import { MobileNavContext } from '@/contexts/MobileNavProvider';
 
@@ -7,6 +7,7 @@ const page = () => {
   React.useEffect(() => {
     if (navShow) toggleNavShow();
   }, []);
+
   return <About />;
 };
 
