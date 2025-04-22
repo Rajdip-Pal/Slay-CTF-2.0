@@ -29,9 +29,11 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-full overflow-x-hidden`}
 			>
-				<ClientWrapper>
-					<MobileNavContextProvider>{children}</MobileNavContextProvider>
-				</ClientWrapper>
+				<div className="layout-wrapper flex flex-col items-center">
+					<ClientWrapper>
+						<MobileNavContextProvider>{children}</MobileNavContextProvider>
+					</ClientWrapper>
+				</div>
 			</body>
 		</html>
 	);

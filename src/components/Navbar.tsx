@@ -11,7 +11,6 @@ import { MobileNavContext } from '@/contexts/MobileNavProvider';
 
 const navContent = [
 	{ title: 'Home', href: '/', expandable: false },
-	{ title: 'About', href: '/#about', expandable: false },
 	{ title: 'Members', href: '/members', expandable: false },
 	{ title: 'Timeline', href: '/events', expandable: false },
 ];
@@ -37,7 +36,7 @@ function Navbar() {
 				</div>
 			</nav>
 
-			<nav className="md:hidden fixed w-[100%] z-10 from-black via-[rgba(0,0,0,0.5)] to-transparent backdrop-blur-xl flex justify-between p-5 text-white">
+			<nav className="md:hidden z-50 fixed w-[100%] from-black via-[rgba(0,0,0,0.5)] to-transparent backdrop-blur-xl flex justify-between p-5 text-white">
 				<div className="h-10 font-bold text-xl">
 					<Link href="/">SLAY CTF</Link>
 				</div>

@@ -35,7 +35,7 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5 }}
-						className="w-[80%] mx-auto text-center mb-12"
+						className="w-full mx-auto text-center mb-12"
 					>
 						<h2 className="text-3xl font-semibold mb-3 bg-gradient-to-r from-foreground via-foreground/80 to-foreground bg-clip-text">
 							{title}
@@ -46,7 +46,7 @@ const FaqSection = React.forwardRef<HTMLElement, FaqSectionProps>(
 					</motion.div>
 
 					{/* FAQ Items */}
-					<div className="w-[80%] mx-auto space-y-2">
+					<div className="w-[80%] md:w-full mx-auto space-y-2">
 						{items.map((item, index) => (
 							<FaqItem
 								key={index}
@@ -83,7 +83,7 @@ const FaqItem = React.forwardRef<
 			transition={{ duration: 0.2, delay: index * 0.1 }}
 			className={cn(
 				'group rounded-lg',
-				'transition-all duration-200 ease-in-out',
+				'transition-all duration-200 ease-in-out w-full',
 				'border border-border/50',
 				isOpen
 					? 'bg-gradient-to-br from-background via-muted/50 to-background'
@@ -101,6 +101,11 @@ const FaqItem = React.forwardRef<
 						isOpen ? 'text-primary text-black' : 'text-white',
 						isOpen && 'text-foreground',
 					)}
+					style={{
+						overflowX: isOpen ? 'visible' : 'hidden',
+						whiteSpace: isOpen ? 'normal' : 'nowrap',
+						textOverflow: isOpen ? 'clip' : 'ellipsis',
+					}}
 				>
 					{question}
 				</h3>

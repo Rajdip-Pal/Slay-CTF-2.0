@@ -29,7 +29,7 @@ function Footerdemo({
 		},
 		{
 			text: 'Timeline',
-			link: '/#timeline',
+			link: '/events',
 		},
 	],
 	contactUs = {
@@ -39,7 +39,7 @@ function Footerdemo({
 		{
 			icon: <FaLinkedin />,
 			text: 'Linkedin',
-			link: '',
+			link: 'https://www.linkedin.com/company/slay-ctf/',
 			hoverMessage: 'Connect with us on Linkedin.',
 		},
 		{

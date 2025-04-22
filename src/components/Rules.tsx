@@ -19,7 +19,7 @@ const itemVariants = {
 
 function Rules() {
 	return (
-		<section id="rules" className="font-sans w-full p-10">
+		<section id="rules" className="font-sans w-full p-5">
 			<motion.div
 				initial="hidden"
 				whileInView="visible"
@@ -54,7 +54,7 @@ function Rules() {
 						<motion.p
 							key={index}
 							variants={itemVariants}
-							className="flex items-start gap-2 p-4 md:text-xl rounded-lg hover:bg-white/10 transition duration-300 hover:shadow-[0_0_10px_rgba(236,72,153,0.6)] "
+							className="flex items-start gap-2 p-1 md:p-4 md:text-xl rounded-lg hover:bg-white/10 transition duration-300 hover:shadow-[0_0_10px_rgba(236,72,153,0.6)] "
 						>
 							<span className="text-pink-400 mt-1">
 								<FaArrowRight />

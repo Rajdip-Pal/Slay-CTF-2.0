@@ -61,14 +61,14 @@ export function Clock({ targetDate = new Date('2025-04-25') }: ClockProps): Reac
 
 	return (
 		<div className="relative max-w-[80%] md:max-w-[60%] text-white bg-transparent flex flex-col items-center space-y-5 p-10 md:p-16 border rounded-2xl font-sans">
-			<div className="flex justify-center space-x-2 md:space-x-5">
+			<div className="flex justify-center md:space-x-5">
 				{(['Days', 'Hours', 'Minutes', 'Seconds'] as Array<keyof typeof Times>).map(
 					(item, index) => (
 						<div
 							key={index}
-							className="flex flex-col justify-center items-center space-y-3"
+							className="flex flex-col justify-center items-center md:space-y-3"
 						>
-							<div className="text-3xl scale-75 md:scale-90 lg:scale-100 w-[4.25rem] md:w-20 h-20 bg-pink-800 text-center flex justify-center rounded-sm  space-y-3 duration-700 overflow-hidden">
+							<div className="text-3xl scale-75 md:scale-90 lg:scale-100 w-[4rem] md:w-20 h-[4rem] md:h-20 bg-pink-800 text-center flex justify-center rounded-sm  space-y-3 duration-700 overflow-hidden">
 								<SlidingNumber
 									value={Times[item]}
 									padStart={true}
@@ -80,7 +80,7 @@ export function Clock({ targetDate = new Date('2025-04-25') }: ClockProps): Reac
 					),
 				)}
 			</div>
-			<div className="flex flex-col justify-center items-center space-y-3">
+			<div className="flex flex-col justify-center items-center text-center space-y-3">
 				<p className="text-sm md:text-xl mb-5">
 					Don't Miss the Chance Registre yourself Now
 				</p>
