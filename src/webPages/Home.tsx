@@ -39,8 +39,10 @@ function Home() {
 
 			<div className="w-full space-y-20 flex flex-col justify-center items-center">
 				<Clock />
-				<Rules />
-				<FAQ />
+				<section id="about" className="max-w-[80%] flex flex-col items-center">
+					<Rules />
+					<FAQ />
+				</section>
 				<Sponsers />
 			</div>
 		</React.Fragment>

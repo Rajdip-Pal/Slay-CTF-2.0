@@ -16,12 +16,16 @@ function Footerdemo({
 			link: '/',
 		},
 		{
-			text: 'About Us',
-			link: '/about',
+			text: 'About',
+			link: '/#about',
 		},
 		{
 			text: 'Rules',
 			link: '/#rules',
+		},
+		{
+			text: 'Members',
+			link: '/members',
 		},
 		{
 			text: 'Timeline',
@@ -29,8 +33,7 @@ function Footerdemo({
 		},
 	],
 	contactUs = {
-		phone: '+91 8509768930',
-		email: 'rajdippal.rp@outlook.com',
+		phone: '+91 8240200714',
 	},
 	followUs = [
 		{
@@ -173,13 +176,13 @@ function Footerdemo({
 					<div className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 text-center md:flex-row">
 						<p className="text-sm text-muted-foreground">
 							© {new Date().getFullYear()}{' '}
-							<a
+							<Link
 								href="https://www.linkedin.com/company/z3r0l0g0n/"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
 								Z3R0_LOGON
-							</a>
+							</Link>
 							. All rights reserved.
 						</p>
 						<nav className="flex gap-4 text-sm">

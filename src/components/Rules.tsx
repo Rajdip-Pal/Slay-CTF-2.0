@@ -19,7 +19,7 @@ const itemVariants = {
 
 function Rules() {
 	return (
-		<section id="rules" className="font-sans max-w-[80%]">
+		<section id="rules" className="font-sans w-full p-10">
 			<motion.div
 				initial="hidden"
 				whileInView="visible"

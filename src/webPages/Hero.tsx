@@ -174,15 +174,6 @@ function HeroGeometric({ badge, title1, title2, description }: HeroInput) {
 						<Circle className="h-2 w-2 fill-rose-500/80" />
 						<span className="text-sm text-white/60 tracking-wide">{badge}</span>
 					</motion.div>
-
-					{/* <motion.div
-            custom={2}
-            variants={fadeUpVariants}
-            initial='hidden'
-            animate='visible'
-          >
-            {description}
-          </motion.div> */}
 				</div>
 			</div>
 
@@ -196,7 +187,7 @@ export { HeroGeometric };
 function Hero() {
 	return (
 		<HeroGeometric
-			badge="ZERO LOGON X DNC"
+			badge="ZERO LOGON"
 			title1={<SLAY_LOGO />}
 			description={
 				<div className="mt-40 typing-container">

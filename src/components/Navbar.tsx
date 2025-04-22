@@ -28,7 +28,10 @@ function Navbar() {
 				<NavigationMenuDemo content={navContent} />
 				<div className="space-x-2">
 					<Button onClick={() => (window.location.href = LOGIN_URL)}>Login</Button>
-					<Button onClick={() => (window.location.href = REGISTRATION_URL)}>
+					<Button
+						onClick={() => (window.location.href = REGISTRATION_URL)}
+						className="hidden lg:inline-block"
+					>
 						Register
 					</Button>
 				</div>
