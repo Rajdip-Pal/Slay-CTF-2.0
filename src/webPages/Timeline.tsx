@@ -72,32 +72,35 @@ function Timeline({ events = Events }: { events?: TimelineCardProps[] }) {
               </div>
             );
           })()}
-          <div className='relative md:hidden flex flex-col items-end space-y-10'>
+          <div className='relative md:hidden flex flex-col items-end space-y-10 border-l-4 border-pink-700'>
             {events.map((event, index) => {
               return (
-                <div
-                  key={index}
-                  className={`relative bg-transparent w-[90%] flex items-end text`}
-                >
-                  <div className=' border-pink-600 border-4 p-4 rounded-lg hover:scale-[1.04] transition-all duration-300'>
-                    <h3 className='text-xl font-semibold'>{event.event}</h3>
-                    <p className='text-gray-400'>{event.date}</p>
-                    {event.time && (
-                      <p className='text-gray-400'>{event.time}</p>
-                    )}
-                    {event.description && (
-                      <p className='text-gray-300 mt-2'>{event.description}</p>
-                    )}
-                  </div>
+                <div className='relative flex justify-end'>
                   <div
-                    className={`absolute -left-[3.25rem] top-10 w-10 h-10 z-20 rounded-full border-2 border-pink-500 bg-pink-500 flex justify-center items-center hover:animate-bounce duration-700`}
+                    key={index}
+                    className={` bg-transparent w-[90%] flex items-end text`}
                   >
-                    <FaStar />
+                    <div className=' border-pink-600 border-4 p-4 rounded-lg hover:scale-[1.04] transition-all duration-300'>
+                      <h3 className='text-xl font-semibold'>{event.event}</h3>
+                      <p className='text-gray-400'>{event.date}</p>
+                      {event.time && (
+                        <p className='text-gray-400'>{event.time}</p>
+                      )}
+                      {event.description && (
+                        <p className='text-gray-300 mt-2'>
+                          {event.description}
+                        </p>
+                      )}
+                    </div>
+                    <div
+                      className={`absolute -left-[1.35rem] top-5 w-10 h-10 rounded-full border-2 border-pink-500 bg-pink-500 flex justify-center items-center hover:animate-bounce duration-700`}
+                    >
+                      <FaStar />
+                    </div>
                   </div>
                 </div>
               );
             })}
-            <div className='absolute left-0 -top-10 h-full w-[4px] bg-pink-700 rounded-md '></div>
           </div>
         </div>
       </div>
