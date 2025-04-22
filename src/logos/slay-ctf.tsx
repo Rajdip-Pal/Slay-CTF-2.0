@@ -5,20 +5,20 @@ import Twitter_Logo from '@/assets/icons/twiter-x.png';
 import RULES from '@/assets/images/rules-image_optimized.png';
 
 interface LogoInput {
-  className?: string;
+	className?: string;
 }
 
 const SLAY_LOGO = ({ className }: LogoInput) => (
-  <Image src={SLAY_CTF} alt='SLAY' className={className} />
+	<Image src={SLAY_CTF} alt="SLAY" className={className} />
 );
 const SLAY_BANNER = ({ className }: LogoInput) => (
-  <Image src={SLAY_CTF_BANNER} alt='SLAY BANNER' className={className} />
+	<Image src={SLAY_CTF_BANNER} alt="SLAY BANNER" className={className} />
 );
 const TWITTER_LOGO = ({ className }: LogoInput) => (
-  <Image src={Twitter_Logo} alt='Twitter Logo' className={className} />
+	<Image src={Twitter_Logo} alt="Twitter Logo" className={className} />
 );
 const RULES_IMAGE = ({ className }: LogoInput) => (
-  <Image src={RULES} alt='Twitter Logo' className={className} />
+	<Image src={RULES} alt="Twitter Logo" className={className} />
 );
 
 export default SLAY_LOGO;

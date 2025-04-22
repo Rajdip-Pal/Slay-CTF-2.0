@@ -3,25 +3,23 @@
 import React from 'react';
 import ThemeProvider from '@/contexts/ThemeProvider';
 import Home from '@/webPages/Home';
-import MobileNavContextProvider, {
-  MobileNavContext,
-} from '@/contexts/MobileNavProvider';
+import MobileNavContextProvider, { MobileNavContext } from '@/contexts/MobileNavProvider';
 
 const page = () => {
-  const { navShow, toggleNavShow } = React.useContext(MobileNavContext);
-  React.useEffect(() => {
-    if (navShow) toggleNavShow();
-  }, []);
+	const { navShow, toggleNavShow } = React.useContext(MobileNavContext);
+	React.useEffect(() => {
+		if (navShow) toggleNavShow();
+	}, []);
 
-  return (
-    <ThemeProvider>
-      <MobileNavContextProvider>
-        <React.Fragment>
-          <Home />
-        </React.Fragment>
-      </MobileNavContextProvider>
-    </ThemeProvider>
-  );
+	return (
+		<ThemeProvider>
+			<MobileNavContextProvider>
+				<React.Fragment>
+					<Home />
+				</React.Fragment>
+			</MobileNavContextProvider>
+		</ThemeProvider>
+	);
 };
 
 export default page;
