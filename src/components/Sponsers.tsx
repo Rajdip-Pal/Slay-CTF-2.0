@@ -14,16 +14,6 @@ function Sponsers() {
         position: 'relative',
         overflow: 'hidden',
       }}
-      // animate={{
-      //   borderColor: [
-      //     '#FF007F', // Pink
-      //     '#FF6600', // Orange
-      //     '#FF0066', // Red
-      //     '#FF00FF', // Magenta
-      //     '#00FFFF', // Cyan
-      //     '#FF007F', // Back to Pink
-      //   ],
-      // }}
       transition={{
         duration: 6,
         repeat: Infinity,

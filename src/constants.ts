@@ -1,4 +1,5 @@
 import { TestimonialCardProps } from '@/components/ui/testimonial-card';
+import { TimelineCardProps } from './webPages/Timeline';
 
 export const LOGIN_URL: string = '#';
 export const REGISTRATION_URL: string = '#';
@@ -117,4 +118,34 @@ export const EVENT_RULES: string[] = [
   'Flag sharing is strictly prohibited. It will cause a ban from the CTF for both players.',
   'The duration of the CTF is 2.5 hours.',
   'Any type of attack on the CTF website is strictly prohibited.',
+];
+export const EVENT_TIMES: TimelineCardProps[] = [
+  {
+    event: 'Null Meetup',
+    date: '26 Apr 2025',
+    // time: '10:00 AM',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia ut quibusdam molestiae corporis. Aliquam aperiam quae non. Ipsam, odio culpa odit exercitationem repudiandae libero consectetur sapiente voluptates accusantium fugit laboriosam.',
+  },
+  {
+    event: 'CTF Event',
+    date: '27 Apr 2025',
+    // time: '10:00 AM',
+    description:
+      ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam beatae, rerum odit, architecto ipsa sit consequatur delectus illo aperiam harum distinctio, tenetur facilis dolor nostrum. Consequuntur incidunt quasi sunt enim?',
+  },
+  {
+    event: 'Code Event',
+    date: '28 Apr 2025',
+    // time: '10:00 AM',
+    description:
+      ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam beatae, rerum odit, architecto ipsa sit consequatur delectus illo aperiam harum distinctio, tenetur facilis dolor nostrum. Consequuntur incidunt quasi sunt enim?',
+  },
+  {
+    event: 'Event End',
+    date: '29 Apr 2025',
+    // time: '10:00 AM',
+    description:
+      ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam beatae, rerum odit, architecto ipsa sit consequatur delectus illo aperiam harum distinctio, tenetur facilis dolor nostrum. Consequuntur incidunt quasi sunt enim?',
+  },
 ];
