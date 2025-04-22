@@ -12,7 +12,7 @@ interface ClockProps {
 }
 
 export function Clock({
-  targetDate = new Date('2025-04-27'),
+  targetDate = new Date('2025-04-25'),
 }: ClockProps): React.JSX.Element {
   const [days, setDays] = React.useState<number>(0);
   const [hours, setHours] = React.useState<number>(0);
@@ -87,12 +87,14 @@ export function Clock({
         ))}
       </div>
       <div className='flex flex-col justify-center items-center space-y-3'>
-        <p className='text-sm'>Don't Miss the Chance Registre yourself Now</p>
+        <p className='text-sm md:text-xl mb-5'>
+          Don't Miss the Chance Registre yourself Now
+        </p>
         <Link
           href={REGISTRATION_URL}
-          className='p-2 pl-3 bg-transparent hover:bg-transparent border rounded-sm hover:scale-105 duration-700 hover:shadow-xl hover:shadow-pink-500'
+          className='p-2 pl-3 bg-transparent hover:bg-transparent border rounded-sm hover:scale-105 duration-700 hover:shadow-xl hover:shadow-pink-500 font-squidGame'
         >
-          Register Now
+          Register
         </Link>
       </div>
       <Image

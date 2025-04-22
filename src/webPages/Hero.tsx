@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { Circle } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
 import SLAY_LOGO from '../logos/slay-ctf';
 import { ReactNode } from 'react';
 

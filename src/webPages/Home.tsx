@@ -10,7 +10,7 @@ import Sponsers from '@/components/Sponsers';
 function Home() {
   React.useEffect(() => {
     document.title = 'Home | Slay CTF';
-  }, []);
+  });
 
   const { theme } = React.useContext(ThemeContext);
 

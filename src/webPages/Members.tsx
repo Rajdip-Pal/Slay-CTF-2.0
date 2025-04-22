@@ -10,7 +10,7 @@ const CoreTeam: TestimonialCardProps[] = EVENT_MEMBERS;
 function Members() {
   React.useEffect(() => {
     document.title = 'Members | Slay Ctf';
-  }, []);
+  });
 
   return (
     <React.Fragment>
