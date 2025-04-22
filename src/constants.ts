@@ -122,17 +122,25 @@ export const EVENT_RULES: string[] = [
 ];
 export const EVENT_TIMES: TimelineCardProps[] = [
   {
-    event: 'Null Meetup',
-    date: '26 Apr 2025',
+    event: 'Inauguration & CTF',
+    date: '25 Apr 2025',
+    time: '3:00 PM - 6:30 PM',
     description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia ut quibusdam molestiae corporis. Aliquam aperiam quae non. Ipsam, odio culpa odit exercitationem repudiandae libero consectetur sapiente voluptates accusantium fugit laboriosam.',
+      'The event begins with the inauguration followed by a thrilling Capture The Flag (CTF) competition that runs into the evening.',
   },
   {
-    event: 'CTF Event',
-    date: '25 Apr 2025',
-    time: '3:00 PM - 6:00 PM',
+    event: 'Null Meetup',
+    date: '26 Apr 2025',
+    time: '10:00 AM - 2:00 PM',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam beatae, rerum odit, architecto ipsa sit consequatur delectus illo aperiam harum distinctio, tenetur facilis dolor nostrum. Consequuntur incidunt quasi sunt enim?',
+      'The day kicks off with sessions by speakers from 10:00 AM, covering diverse topics in tech. Two insightful speaker slots are planned before lunch.',
+  },
+  {
+    event: 'Workshop',
+    date: '26 Apr 2025',
+    time: '2:00 PM - 4:00 PM',
+    description:
+      'A hands-on 2-hour workshop conducted onsite to dive deeper into practical skills and learning.',
   },
   {
     event: 'Code Event',
