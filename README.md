@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Slay-CTF-2.0
 
-## Getting Started
+**Slay-CTF-2.0** is a modern Capture The Flag (CTF) platform built with Next.js and Tailwind CSS. It offers a sleek and responsive interface for hosting cybersecurity challenges, making it ideal for CTF competitions, educational purposes, or personal practice.
 
-First, run the development server:
+## 🌐 Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Experience the platform live at: [slay-ctf](https://slay-ctf-drab.vercel.app)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Modern Stack**: Utilizes Next.js for server-side rendering and Tailwind CSS for rapid UI development.
+- **Responsive Design**: Ensures optimal viewing across various devices.
+- **Modular Architecture**: Clean codebase with organized components for easy scalability.
+- **Developer Friendly**: Pre-configured with ESLint, Prettier, and TypeScript for a seamless development experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Getting Started
 
-## Learn More
+To set up the project locally, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository**:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   git clone https://github.com/Souhardya03/Slay-CTF-2.0.git
+   cd Slay-CTF-2.0
+   ```
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+4. **Access the application**:
+    Open [http://localhost:3000](http://localhost:3000) in your browser to view the platform.
